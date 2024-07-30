@@ -38,7 +38,9 @@ val databaseModule = module {
 val networkModule = module {
     single {
         val certificatePinner = CertificatePinner.Builder()
-            .add(BuildConfig.BASE_URL, BuildConfig.SHA256)
+            .add(BuildConfig.HOST_NAME, BuildConfig.SHA256_1)
+            .add(BuildConfig.HOST_NAME, BuildConfig.SHA256_2)
+            .add(BuildConfig.HOST_NAME, BuildConfig.SHA256_3)
             .build()
 
         val authInterceptor = Interceptor { chain ->

@@ -20,8 +20,11 @@ android {
     buildTypes {
         debug {
             buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
+            buildConfigField("String", "HOST_NAME", "\"api.github.com\"")
             buildConfigField("String", "TOKEN", "\"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\"")
-            buildConfigField("String", "SHA256", "\"sha256/GyhWVHsOXNZc6tGTNd15kXF9YD0kEZaGxYn6MUva5jY=\"")
+            buildConfigField("String", "SHA256_1", "\"sha256/GyhWVHsOXNZc6tGTNd15kXF9YD0kEZaGxYn6MUva5jY=\"")
+            buildConfigField("String", "SHA256_2", "\"sha256/6YBE8kK4d5J1qu1wEjyoKqzEIvyRY5HyM/NB2wKdcZo=\"")
+            buildConfigField("String", "SHA256_3", "\"sha256/ICGRfpgmOUXIWcQ/HXPLQTkFPEFPoDyjvH7ohhQpjzs=\"")
             buildConfigField("String", "PASSPHRASE", "\"airel273\"")
             isMinifyEnabled = true
             proguardFiles(
@@ -31,8 +34,11 @@ android {
         }
         release {
             buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
+            buildConfigField("String", "HOST_NAME", "\"api.github.com\"")
             buildConfigField("String", "TOKEN", "\"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\"")
-            buildConfigField("String", "SHA256", "\"sha256/GyhWVHsOXNZc6tGTNd15kXF9YD0kEZaGxYn6MUva5jY=\"")
+            buildConfigField("String", "SHA256_1", "\"sha256/GyhWVHsOXNZc6tGTNd15kXF9YD0kEZaGxYn6MUva5jY=\"")
+            buildConfigField("String", "SHA256_2", "\"sha256/6YBE8kK4d5J1qu1wEjyoKqzEIvyRY5HyM/NB2wKdcZo=\"")
+            buildConfigField("String", "SHA256_3", "\"sha256/ICGRfpgmOUXIWcQ/HXPLQTkFPEFPoDyjvH7ohhQpjzs=\"")
             buildConfigField("String", "PASSPHRASE", "\"airel273\"")
             isMinifyEnabled = true
             proguardFiles(
