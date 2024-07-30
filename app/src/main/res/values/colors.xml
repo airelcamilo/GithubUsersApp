@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_grayish">#CCCCCCCC</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="github_darker">#FF24292e</color>
+    <color name="github_green">#FF2dba4e</color>
+    <color name="github_green_secondary">#04751E</color>
+</resources>

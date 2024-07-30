@@ -1,0 +1,15 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GithubUsersApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/github_green</item>
+        <item name="colorOnPrimary">@color/github_green_secondary</item>
+        <item name="colorOnPrimarySurface">@color/github_green_secondary</item>
+    </style>
+
+    <style name="Theme.GithubUsersApp" parent="Base.Theme.GithubUsersApp" />
+
+    <style name="RoundedSquare">
+        <item name="cornerSize">8%</item>
+    </style>
+</resources>

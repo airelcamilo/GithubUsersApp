@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GithubUsersApp</string>
+    <string name="menu_1">Favorite Accounts</string>
+    <string name="fab_desc">Favorite</string>
+    <string name="detail_icon_btn_desc">Share</string>
+    <string name="searchbar_hint">Search users…</string>
+    <string name="user">User</string>
+    <string name="username">username</string>
+    <string name="number">10</string>
+    <string name="followers">followers · </string>
+    <string name="following">following</string>
+    <string name="tab_desc">Tabs</string>
+    <string name="tab_text_1">Followers</string>
+    <string name="tab_text_2">Following</string>
+    <string name="data_unavailable">Sorry.. The data is unavailable</string>
+    <string name="your_favorites_is_empty">Your favorites is empty :(</string>
+    <string name="title_favorite">Favorite</string>
+</resources>
