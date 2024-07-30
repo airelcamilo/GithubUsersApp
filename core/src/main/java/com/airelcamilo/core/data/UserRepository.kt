@@ -48,23 +48,17 @@ class UserRepository(
     }
 
     override fun getAllUsers(): Flow<Resource<List<User>>> =
-        object : NetworkBoundResource<List<User>, List<UserItem>>() {
-            override fun loadFromDB(): Flow<List<User>> {
-                return localDataSource.getAllUsers().map {
-                    DataMapper.mapUserEntitiesToDomain(it)
-                }
+        object : RemoteBoundResource<List<User>, List<UserItem>>() {
+            override suspend fun transformApiResponse(data: List<UserItem>): List<User> {
+                return DataMapper.mapUserEntitiesToDomain(DataMapper.mapUserResponsesToEntities(data))
             }
 
-            override fun shouldFetch(@Suppress("unused", "RedundantSuppression") data: List<User>?): Boolean =
-                true
+            override fun onEmpty(): List<UserItem> {
+                return emptyList()
+            }
 
             override suspend fun createCall(): Flow<ApiResponse<List<UserItem>>> =
                 remoteDataSource.getListUsers()
-
-            override suspend fun saveCallResult(data: List<UserItem>) {
-                val userList = DataMapper.mapUserResponsesToEntities(data)
-                localDataSource.insertUsers(userList)
-            }
         }.asFlow()
 
     override fun search(q: String): Flow<Resource<List<User>>> =
